@@ -112,7 +112,7 @@ node default {
 
   include docker
 
-  include authy
+  #include authy
   include spotify
 
   include hipchat
