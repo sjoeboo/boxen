@@ -92,8 +92,8 @@ node default {
   #CUSTOM
 
   #VIM
-  include vim
-  vim::bundle { ['gmarik/Vundle.vim']:}
+  #include vim
+  #vim::bundle { ['gmarik/Vundle.vim']:}
 
   #Iterm2
   include iterm2::stable
