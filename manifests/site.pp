@@ -88,4 +88,29 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
+
+  #CUSTOM
+
+  #VIM
+  include vim
+  vim::bundle { ['gmarik/Vundle.vim']:}
+
+  #Iterm2
+  include iterm2
+  include iterm2::colors::solarized_light
+  include iterm2::colors::solarized_dark
+
+  include virtualbox
+  #include vagrant
+  class { 'vagrant':
+    completion => true,
+  }
+
+  include atom
+
+  include android::platform_tools
+
+  include docker
+
+
 }
