@@ -96,7 +96,7 @@ node default {
   vim::bundle { ['gmarik/Vundle.vim']:}
 
   #Iterm2
-  include iterm2
+  include iterm2::stable
   include iterm2::colors::solarized_light
   include iterm2::colors::solarized_dark
 
