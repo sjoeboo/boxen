@@ -53,7 +53,7 @@ Homebrew::Formula <| |> -> Package <| |>
 
 node default {
   # core modules, needed for most things
-  include dnsmasq
+  #include dnsmasq
   include git
   include hub
   #include nginx
@@ -87,51 +87,5 @@ node default {
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
     target => $boxen::config::repodir
-  }
-
-  #CUSTOM
-
-  #VIM
-  #include vim
-  #vim::bundle { ['gmarik/Vundle.vim']:}
-
-  #Iterm2
-  include iterm2::stable
-  include iterm2::colors::solarized_light
-  include iterm2::colors::solarized_dark
-
-  #include virtualbox
-  #include vagrant
-  class { 'vagrant':
-    completion => true,
-  }
-
-  include atom
-  include java
-  include android::platform_tools
-
-  #include docker
-
-  #include authy
-  include spotify
-
-  include hipchat
-
-  include wget
-  #include zsh
-  $packages = hiera('packages')
-  package {$packages:
-    ensure => installed,
-  }
-  include screen
-  include tmux
-
-  $files = hiera('files',{})
-  $git_repos = hiera('git_repos',{})
-
-  create_resources('file',$files)
-  create_resources('repository',$git_repos)
-  git::config::global{'core.editor':
-    value => '/usr/bin/vim',
   }
 }
