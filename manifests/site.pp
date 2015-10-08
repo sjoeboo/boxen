@@ -100,7 +100,7 @@ node default {
   include iterm2::colors::solarized_light
   include iterm2::colors::solarized_dark
 
-  include virtualbox
+  #include virtualbox
   #include vagrant
   class { 'vagrant':
     completion => true,
@@ -110,7 +110,7 @@ node default {
   include java
   include android::platform_tools
 
-  include docker
+  #include docker
 
   #include authy
   include spotify
