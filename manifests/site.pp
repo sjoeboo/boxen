@@ -119,7 +119,7 @@ node default {
 
   include wget
   #include zsh
-  packge {'zsh':
+  package {'zsh':
     ensure => installed,
   }
   include screen
