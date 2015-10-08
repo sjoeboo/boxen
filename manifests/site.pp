@@ -118,7 +118,10 @@ node default {
   include hipchat
 
   include wget
-  include zsh
+  #include zsh
+  packge {'zsh':
+    ensure => installed,
+  }
   include screen
   include tmux
 
