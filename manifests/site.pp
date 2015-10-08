@@ -125,10 +125,13 @@ node default {
   }
   include screen
   include tmux
-  
+
   $files = hiera('files',{})
   $git_repos = hiera('git_repos',{})
 
   create_resources('file',$files)
   create_resources('repository',$git_repos)
+  git::config::global{'core.editor':
+    value => '/usr/bin/vim',
+  }
 }

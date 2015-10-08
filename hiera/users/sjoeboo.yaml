@@ -6,9 +6,47 @@ packages:
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'
+  "/Users/%{::boxen_user}/.vim":
+    ensure: 'directory'
+  "/Users/%{::boxen_user}/.vim/bundle":
+    ensure: 'directory'
+  "/Users/%{::boxen_user}/.ackrc":
+    ensure: 'link'
+    target: "/Users/%{::boxen_user}/Development/dotfiles/.ackrc"
+  "/Users/%{::boxen_user}/.bashrc":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.bashrc"
+  "/Users/%{::boxen_user}/.bash_aliases":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.bash_aliases"
+  "/Users/%{::boxen_user}/.bash_profile":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.bash_profile"
+  "/Users/%{::boxen_user}/.zshrc":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.zshrc"
+  "/Users/%{::boxen_user}/.ssh":
+   ensure: 'directory'
+  "/Users/%{::boxen_user}/.ssh/config":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.ssh/config"
+  "/Users/%{::boxen_user}/.screenrc":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.screenrc"
+  "/Users/%{::boxen_user}/.tmux.conf":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.tmux.conf"
+  "/Users/%{::boxen_user}/.puppet-lint.rc":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.puppet-lint.rc"
 git_repos:
   "/Users/%{::boxen_user}/Development/dotfiles":
-    source: 'sjoeboo/ditfiles.new'
+    source: 'sjoeboo/dotfiles.new'
     provider: 'git'
     require: "File[/Users/%{::boxen_user}/Development]"
-
+  "/Users/%{::boxen_user}/.antigen":
+    source: 'zsh-users/antigen.git'
+    provider: 'git'
+  "/Users/%{::boxen_user}/.vim/bundle/Vundle.vim":
+    source: 'gmarik/Vundle.vim.git'
+    provider: 'git'
