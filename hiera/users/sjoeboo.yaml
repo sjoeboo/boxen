@@ -4,10 +4,10 @@ packages:
   - nmap
   - htop-osx
 files:
-  '~/Development':
+  "%{::boxen_user}/Development":
     ensure: 'directory'
 git_repos:
-  '~/Development/dotfiles':
+  '%{::boxen_user}/Development/dotfiles':
     source: 'sjoeboo/ditfiles.new'
     provider: 'git'
     require: 'File["~/Development"]'
