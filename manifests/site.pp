@@ -107,7 +107,7 @@ node default {
   }
 
   include atom
-
+  include java
   include android::platform_tools
 
   include docker
