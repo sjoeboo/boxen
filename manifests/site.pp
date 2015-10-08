@@ -119,7 +119,8 @@ node default {
 
   include wget
   #include zsh
-  package {'zsh':
+  $packages = hiera('packages')
+  package {$packages:
     ensure => installed,
   }
   include screen
