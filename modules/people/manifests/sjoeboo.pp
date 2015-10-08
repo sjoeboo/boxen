@@ -40,9 +40,4 @@ class people::sjoeboo {
   git::config::global{'core.editor':
     value => '/usr/bin/vim',
   }
-
-  package {'puppet-lint':
-    ensure    => '1.0.1',
-    provider  => 'gem',
-  }
 }
