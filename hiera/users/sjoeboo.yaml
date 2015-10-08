@@ -3,3 +3,12 @@ packages:
   - zsh
   - nmap
   - htop-osx
+files:
+  '~/Development':
+    ensure: 'directory'
+git_repos:
+  '~/Development/dotfiles':
+    source: 'sjoeboo/ditfiles.new'
+    provider: 'git'
+    require: 'File["~/Development"]'
+
