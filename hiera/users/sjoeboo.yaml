@@ -20,6 +20,8 @@ atom_packages:
   - tree-view-git-status
   - term2
   - tabular
+  - atom-material-ui
+  - atom-material-syntax
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'
