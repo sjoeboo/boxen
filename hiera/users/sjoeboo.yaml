@@ -11,6 +11,8 @@ atom_packages:
   - git-projects
   - hiera-eyaml
   - linter-puppet-lint
+  - language-puppet
+  - language-ruby
   - jonikorpi-atom-solarized-syntax
   - one-dark-ui
   - bracket-matcher

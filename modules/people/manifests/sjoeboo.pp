@@ -1,10 +1,10 @@
 class people::sjoeboo {
   #Dont want them
-  service {"dev.nginx":
-      ensure => "stopped",
+  service {'dev.nginx':
+      ensure => 'stopped',
   }
-  service {"dev.dnsmasq":
-      ensure => "stopped",
+  service {'dev.dnsmasq':
+      ensure => 'stopped',
   }
 
   #Iterm2
@@ -28,14 +28,14 @@ class people::sjoeboo {
   $packages = hiera('packages',[])
   $files = hiera('files',{})
   $git_repos = hiera('git_repos',{})
-  $atom_packages = hiera('atom_packages'[])
+  $atom_packages = hiera('atom_packages',[])
 
   #create things from hiera
   package {$packages:
     ensure => installed,
   }
-  atom::package{ $atom_packages: }
-  
+  atom::package {  $atom_packages: }
+
   create_resources('file',$files)
   create_resources('repository',$git_repos)
 
