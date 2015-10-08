@@ -3,6 +3,21 @@ packages:
   - zsh
   - nmap
   - htop-osx
+atom_packages:
+  - aligner
+  - aligner-puppet
+  - aligner-ruby
+  - git-plus
+  - git-projects
+  - hiera-eyaml
+  - linter-puppet-lint
+  - jonikorpi-atom-solarized-syntax
+  - one-dark-ui
+  - bracket-matcher
+  - tree-view-git-modified
+  - tree-view-git-status
+  - term2
+  - tabular
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'

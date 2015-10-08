@@ -25,15 +25,17 @@ class people::sjoeboo {
   include tmux
 
   #pull from hiera
-  $packages = hiera('packages')
+  $packages = hiera('packages',[])
   $files = hiera('files',{})
   $git_repos = hiera('git_repos',{})
-
+  $atom_packages = hiera('atom_packages'[])
 
   #create things from hiera
   package {$packages:
     ensure => installed,
   }
+  atom::package{ $atom_packages: }
+  
   create_resources('file',$files)
   create_resources('repository',$git_repos)
 
