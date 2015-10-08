@@ -112,5 +112,14 @@ node default {
 
   include docker
 
+  include authy
+  include spotify
+
+  include hipchat
+
+  include wget
+  include zsh
+  include screen
+  include tmux
 
 }
