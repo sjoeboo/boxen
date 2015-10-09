@@ -69,6 +69,9 @@ files:
   "/Users/%{::boxen_user}/.atom/init.coffee":
     ensure: 'link'
     target: "/Users/%{::boxen_user}/Development/dotfiles/.atom.init.coffee"
+  "/Users/%{::boxen_user}/.atom/config.cson":
+    ensure: 'link'
+    target: "/Users/%{::boxen_user}/Development/dotfiles/.atom.config.cson"
 git_repos:
   "/Users/%{::boxen_user}/Development/dotfiles":
     source: 'sjoeboo/dotfiles.new'
