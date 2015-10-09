@@ -66,6 +66,9 @@ files:
   "/Users/%{::boxen_user}/.puppet-lint.rc":
    ensure: 'link'
    target: "/Users/%{::boxen_user}/Development/dotfiles/.puppet-lint.rc"
+  "/Users/%{::boxen_user}/.atom/init.coffee":
+    ensure: 'link'
+    target: "/Users/%{::boxen_user}/Development/dotfiles/.atom.init.coffee"
 git_repos:
   "/Users/%{::boxen_user}/Development/dotfiles":
     source: 'sjoeboo/dotfiles.new'
