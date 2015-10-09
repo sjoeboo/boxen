@@ -22,9 +22,13 @@ atom_packages:
   - tabular
   - atom-material-ui
   - atom-material-syntax
+  - project-manager
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'
+  "/Users/%{::boxen_user}/Development/boxen":
+    ensure: 'link'
+    target: '/opt/boxen/repo'
   "/Users/%{::boxen_user}/.vim":
     ensure: 'directory'
   "/Users/%{::boxen_user}/.vim/bundle":
