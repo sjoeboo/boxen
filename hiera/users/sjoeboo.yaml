@@ -8,7 +8,6 @@ atom_packages:
   - aligner-puppet
   - aligner-ruby
   - git-plus
-  - git-projects
   - hiera-eyaml
   - linter-puppet-lint
   - language-puppet
