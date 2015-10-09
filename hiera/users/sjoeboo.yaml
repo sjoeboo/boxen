@@ -3,6 +3,7 @@ packages:
   - zsh
   - nmap
   - htop-osx
+  - fontconfig
 atom_packages:
   - aligner
   - aligner-puppet
@@ -22,6 +23,7 @@ atom_packages:
   - atom-material-ui
   - atom-material-syntax
   - project-manager
+  - merge-conflicts
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'
@@ -80,4 +82,7 @@ git_repos:
     provider: 'git'
   "/Users/%{::boxen_user}/Development/powerline":
     source: 'powerline/powerline.git'
+    provider: 'git'
+  "/Users/%{::boxen_user}/Development/awesome-fonts":
+    source: 'gabrielelana/awesome-terminal-fonts'
     provider: 'git'
