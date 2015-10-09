@@ -44,6 +44,9 @@ files:
   "/Users/%{::boxen_user}/.zshrc":
    ensure: 'link'
    target: "/Users/%{::boxen_user}/Development/dotfiles/.zshrc"
+  "/Users/%{::boxen_user}/.zsh_aliases":
+   ensure: 'link'
+   target: "/Users/%{::boxen_user}/Development/dotfiles/.zsh_aliases"
   "/Users/%{::boxen_user}/.ssh":
    ensure: 'directory'
   "/Users/%{::boxen_user}/.ssh/config":
@@ -68,4 +71,10 @@ git_repos:
     provider: 'git'
   "/Users/%{::boxen_user}/.vim/bundle/Vundle.vim":
     source: 'gmarik/Vundle.vim.git'
+    provider: 'git'
+  "/Users/%{::boxen_user}/Development/powerline-fonts":
+    source: 'powerline/fonts.git'
+    provider: 'git'
+  "/Users/%{::boxen_user}/Development/powerline":
+    source: 'powerline/powerline.git'
     provider: 'git'
