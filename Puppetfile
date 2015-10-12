@@ -80,4 +80,5 @@ github "wget",        "1.0.1"
 github "zsh",         "1.0.0"
 github "screen",      "0.0.2"
 github "tmux",        "1.0.2"
-
+github "authy",       "1.0.1"
+github "chrome",      "1.2.0"

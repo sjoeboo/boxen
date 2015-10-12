@@ -23,6 +23,8 @@ class people::sjoeboo {
   include wget
   include screen
   include tmux
+  #include authy
+  include chrome
 
   #pull from hiera
   $packages = hiera('packages',[])
