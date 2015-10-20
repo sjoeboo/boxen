@@ -64,7 +64,7 @@ node default {
   }
 
   include openssl
-  package {'openssl-devel'}
+
   # node versions
 #  nodejs::version { '0.6': }
 #  nodejs::version { '0.8': }
