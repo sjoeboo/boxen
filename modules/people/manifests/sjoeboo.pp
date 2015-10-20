@@ -1,12 +1,5 @@
 class people::sjoeboo {
-  #Dont want them
-  service {'dev.nginx':
-      ensure => 'stopped',
-  }
-  service {'dev.dnsmasq':
-      ensure => 'stopped',
-  }
-
+  
   #Iterm2
   include iterm2::stable
   include iterm2::colors::solarized_light
@@ -31,7 +24,7 @@ class people::sjoeboo {
   $files = hiera('files',{})
   $git_repos = hiera('git_repos',{})
   $atom_packages = hiera('atom_packages',[])
-  
+
   atom::package {  $atom_packages: }
 
   git::config::global{'core.editor':
