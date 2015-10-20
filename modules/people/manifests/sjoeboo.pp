@@ -1,5 +1,5 @@
 class people::sjoeboo {
-  
+
   #Iterm2
   include iterm2::stable
   include iterm2::colors::solarized_light
@@ -18,6 +18,7 @@ class people::sjoeboo {
   include tmux
   #include authy
   include chrome
+  include docker_toolbox
 
   #pull from hiera
   $packages = hiera('packages',[])
