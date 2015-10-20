@@ -4,6 +4,7 @@ packages:
   - nmap
   - htop-osx
   - fontconfig
+  - ansible
 atom_packages:
   - aligner
   - aligner-puppet
