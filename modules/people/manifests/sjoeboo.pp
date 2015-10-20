@@ -31,15 +31,8 @@ class people::sjoeboo {
   $files = hiera('files',{})
   $git_repos = hiera('git_repos',{})
   $atom_packages = hiera('atom_packages',[])
-
-  #create things from hiera
-  package {$packages:
-    ensure => installed,
-  }
+  
   atom::package {  $atom_packages: }
-
-  create_resources('file',$files)
-  create_resources('repository',$git_repos)
 
   git::config::global{'core.editor':
     value => '/usr/bin/vim',
