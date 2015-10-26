@@ -20,6 +20,21 @@ class people::sjoeboo {
   include chrome
   include docker_toolbox
 
+  #GPG Things
+  class { 'gpgtools':
+    version => '2015.09'
+  }
+  npm_module  {'keybase-installer':
+    ensure       => present,
+    module       => 'keybase-installer',
+    node_version => '0.10'
+  }
+  exec {'keybase-installer':
+    command => 'keybase-installer',
+    creates => "/Users/${::boxen_user}/.keybase-installer",
+    require => Npm_module['keybase-installer'],
+  }
+
   #pull from hiera
   $packages = hiera('packages',[])
   $files = hiera('files',{})
