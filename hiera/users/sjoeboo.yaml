@@ -5,6 +5,7 @@ packages:
   - htop-osx
   - fontconfig
   - ansible
+  - packer
 atom_packages:
   - aligner
   - aligner-puppet
@@ -26,7 +27,6 @@ atom_packages:
   - project-manager
   - merge-conflicts
 docker_toolbox::version: '1.8.3'
-packer::version: '0.8.6'
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'
