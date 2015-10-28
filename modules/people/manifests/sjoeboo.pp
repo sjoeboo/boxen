@@ -19,6 +19,7 @@ class people::sjoeboo {
   #include authy
   include chrome
   include docker_toolbox
+  include packer
 
   #GPG Things
   class { 'gpgtools':

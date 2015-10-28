@@ -26,6 +26,7 @@ atom_packages:
   - project-manager
   - merge-conflicts
 docker_toolbox::version: '1.8.3'
+packer::version: '0.8.6'
 files:
   "/Users/%{::boxen_user}/Development":
     ensure: 'directory'
@@ -36,6 +37,9 @@ files:
     ensure: 'directory'
   "/Users/%{::boxen_user}/.vim/bundle":
     ensure: 'directory'
+  "/Users/%{::boxen_user}/.vimrc":
+    ensure: 'link'
+    target: "/Users/%{::boxen_user}/Development/dotfiles/.vimrc"
   "/Users/%{::boxen_user}/.ackrc":
     ensure: 'link'
     target: "/Users/%{::boxen_user}/Development/dotfiles/.ackrc"
